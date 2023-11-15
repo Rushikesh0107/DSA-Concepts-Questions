@@ -2,6 +2,11 @@
 using namespace std;
 
 int main(){
+
+    //in this problem we have to find the next closest permutation of the given array
+    
+    //Step 1
+
     int a[] = {3,1,5,4,3,2,0,0};
     int n = sizeof(a)/sizeof(a[0]);
     int ind = -1;
