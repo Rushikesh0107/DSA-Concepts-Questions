@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//class to define the structure of a node
+
 class Node {
     public:
     int data;
@@ -19,6 +21,8 @@ class Node {
     }
 };
 
+//function to convert array to linked list
+
 Node* ConvertArrayToLL(vector<int> &arr){
     Node* head = new Node(arr[0]);
     Node* mover = head;
@@ -35,6 +39,17 @@ Node* ConvertArrayToLL(vector<int> &arr){
 int main(){
     vector<int> arr = {2,3,4,5,6};
     Node* head = ConvertArrayToLL(arr);
+
+    //printing the head of the linked list
     
     cout<<head->data<<endl;
+
+    //traversing the linked list
+    
+    Node* temp = head;
+    
+    while(temp){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
 }
