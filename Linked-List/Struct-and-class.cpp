@@ -71,4 +71,5 @@ int main(){
     //searching through the linked list
 
     cout<<SearchThroughLL(head, 4)<<endl;
+    cout<<SearchThroughLL(head, 7)<<endl;
 }
