@@ -19,10 +19,24 @@ class Node{
     }
 };
 
+//remove the element from the head of the linked list
+
 Node* RemoveHead(Node* head){
     Node* temp = head;
     head = head->next;
     free(temp);
+    return head;
+}
+
+// Remove the tail of the linked list
+
+Node* RemoveTail(Node* head){
+    Node* temp = head;
+    if(temp->next->next !== NULL){
+        temp = temp->next;
+    }
+    free(temp->next);
+    temp->next = nullptr;
     return head;
 }
 
@@ -41,10 +55,21 @@ Node* ConvertArrayToLL(vector<int> arr){
 
 int main(){
     vector<int> arr = {1,2,3,4,55,6};
+
+    //converting the array to linked list
     
     Node* head = ConvertArrayToLL(arr);
+
+    //removing the head and tail of the linked list
     
     Node* newHead = RemoveHead(head);
+
+    //removig the tail of the linked list
+
+    RemoveTail(newHead);
+
+    //printing the linked list
+
     Node*temp = newHead;
     
     while(temp){
