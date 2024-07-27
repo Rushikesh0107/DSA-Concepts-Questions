@@ -17,7 +17,7 @@ int findMP(vector<int> prices) {
 }
 
 int main () {
-    vector<int> prices = {7, 1, 5, 3, 6, 4};
+    vector<int> prices{7, 1, 5, 3, 6, 4};
     int MP = findMP(prices);
     cout<<"The max profit is "<<MP<<endl;
 }
